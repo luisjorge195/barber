@@ -77,7 +77,7 @@ def reservar_turno(request):
 
 
         # Validación de datos
-        required_fields = ['nombre', 'apellido', 'dni', 'telefono', 'mail', 'fecha', 'hora']
+        required_fields = ['nombre', 'apellido', 'cedula', 'telefono', 'mail', 'fecha', 'hora']
         for field in required_fields:
             if field not in data:
                 return Response({"error": f"Campo '{field}' faltante en los datos"}, status=status.HTTP_400_BAD_REQUEST)
@@ -88,7 +88,7 @@ def reservar_turno(request):
         nuevo_cliente, created = Cliente.objects.get_or_create(
             nombre=data['nombre'],
             apellido=data['apellido'],
-            dni=data['dni'],
+            cedula=data['cedula'],
             telefono=data['telefono'],
             mail=data['mail']
         )

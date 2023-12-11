@@ -56,9 +56,6 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost:4200',
-)
 
 
 ROOT_URLCONF = 'Barberia.urls'
@@ -87,12 +84,8 @@ WSGI_APPLICATION = 'Barberia.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Barberia',
-        'USER': 'root',
-        'PASSWORD': 'eljulibasededatos',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

@@ -3,7 +3,7 @@ from django.db import models
 class Persona(models.Model):
     nombre = models.CharField(max_length=200)
     apellido = models.CharField(max_length=200)
-    dni = models.IntegerField()
+    cedula = models.IntegerField()
     telefono = models.IntegerField()
     mail = models.EmailField()
     
