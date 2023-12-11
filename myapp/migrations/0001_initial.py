@@ -25,7 +25,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('nombre', models.CharField(max_length=200)),
                 ('apellido', models.CharField(max_length=200)),
-                ('dni', models.IntegerField()),
+                ('cedula', models.IntegerField()),
                 ('telefono', models.IntegerField()),
                 ('mail', models.EmailField(max_length=254)),
             ],

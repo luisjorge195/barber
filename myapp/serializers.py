@@ -7,7 +7,7 @@ class PersonaSerializer(serializers.ModelSerializer):
         model = Persona
         fields = ('nombre',
                   'apellido',
-                  'dni',
+                  'cedula',
                   'telefono',
                   'mail')
 
@@ -37,7 +37,7 @@ class TurnoSerializer(serializers.ModelSerializer):
 class ClienteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cliente
-        fields = ('nombre', 'apellido', 'dni', 'telefono', 'mail', 'turno_asignado',)
+        fields = ('nombre', 'apellido', 'cedula', 'telefono', 'mail', 'turno_asignado',)
 
     def validate(self, data):
         # Imprime solo los campos específicos de Cliente
